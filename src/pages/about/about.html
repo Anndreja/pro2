@@ -1,11 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Meritve
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+    <ion-list class="bd" >
+        <ion-item >
+          <ion-label>Vnos meritev</ion-label>
+          <ion-select [(ngModel)]="measure" okText="Ok" cancelText="Zapri">
+            <ion-option value="sladkor">Sladkor</ion-option>
+            <ion-option value="hbA1c">HbA1c</ion-option>
+            <ion-option value="pregled-stopal">Pregled stopal</ion-option>
+            <ion-option value="nogi">Razjeda na nogi</ion-option>
+            <ion-option value="kozi">Spremembo koži</ion-option>
+            <ion-option value="okuzba">Okužba</ion-option>
+            <ion-option value="opazanja">Druga opažanja</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+      <ion-input  class="bd" clearInput></ion-input>
 </ion-content>

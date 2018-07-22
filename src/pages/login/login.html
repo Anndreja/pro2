@@ -1,0 +1,29 @@
+<!--
+  Generated template for the LoginPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sonia app</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="login(form, c)" novalidate>
+    <ion-item>
+        <ion-img width="200" height="150" src="/assets/imgs/fzv-logo.png"></ion-img>
+    </ion-item>
+    <ion-item>
+      <ion-label>Uporabniško ime</ion-label>
+      <ion-input type="text" [value]="username" name="username" [(ngModel)]="username" ngControl="todo.username" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Geslo</ion-label>
+      <ion-input [value]="password" [(ngModel)]="password" name="password" ngControl="todo.password" type="password" requered></ion-input>
+    </ion-item>
+    <ion-item>
+      <button class="login" ion-button large type="submit" >Prijava</button>
+    </ion-item>
+  </form>
+</ion-content>

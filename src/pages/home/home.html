@@ -1,17 +1,25 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Nadzorna plošča</ion-title>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-list>
+    <ion-item>
+      <ion-label>Številka pacienta :</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <button large ion-button class="new">Naloži</button>
+    </ion-item>
+    <ion-item>
+      <ngx-charts-line-chart [view]="view" [scheme]="colorScheme" [results]="results" [legend]="showLegend"     [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      [autoScale]="autoScale"></ngx-charts-line-chart>
+    </ion-item>
+  </ion-list>
 </ion-content>
